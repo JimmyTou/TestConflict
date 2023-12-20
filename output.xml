@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230906 11:50:17.952" rpa="false" schemaversion="4">
+<suite id="s1" name="TestConflict" source="C:\Users\User\Documents\TestConflict">
+<suite id="s1-s1" name="pythonProject" source="C:\Users\User\Documents\TestConflict\pythonProject">
+<suite id="s1-s1-s1" name="roc cpa robotTest" source="C:\Users\User\Documents\TestConflict\pythonProject\roc_cpa_robotTest">
+<suite id="s1-s1-s1-s1" name="8 持續進修管理 優惠券與系列課程" source="C:\Users\User\Documents\TestConflict\pythonProject\roc_cpa_robotTest\8_持續進修管理_優惠券與系列課程.robot">
+<kw name="Setup" type="SETUP">
+<kw name="Open Page" library="CommonResource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230906 11:50:19.497" level="INFO">Opening browser 'Chrome' to base url 'https://test.ROCcpa.org.tw/TACCTG/loginPage#'.</msg>
+<status status="PASS" starttime="20230906 11:50:19.497" endtime="20230906 11:50:26.591"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230906 11:50:26.591" endtime="20230906 11:50:26.725"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:19.497" endtime="20230906 11:50:26.725"/>
+</kw>
+<kw name="Login" library="CommonResource">
+<arg>${Employee}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//input[@name="userCode"]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:26.725" endtime="20230906 11:50:26.797"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="userCode"]</arg>
+<arg>${User.Account}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:26.798" level="INFO">Typing text 'document04' into text field '//input[@name="userCode"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:26.797" endtime="20230906 11:50:26.884"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type="password"]</arg>
+<arg>${User.Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:26.885" level="INFO">Typing text '1qaz2wsx' into text field '//input[@type="password"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:26.884" endtime="20230906 11:50:26.961"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:26.962" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:26.962" endtime="20230906 11:50:28.602"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:26.725" endtime="20230906 11:50:28.602"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:19.497" endtime="20230906 11:50:28.602"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="8-22-01" line="45">
+<kw name="Coupon Maintain">
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:28.609" endtime="20230906 11:50:28.654"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:28.655" level="INFO">Clicking element '//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:28.654" endtime="20230906 11:50:28.725"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:28.609" endtime="20230906 11:50:28.725"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>//a[text()="優惠劵管理"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:28.726" endtime="20230906 11:50:28.755"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:28.755" level="INFO">Clicking element '//a[text()="優惠劵管理"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:28.755" endtime="20230906 11:50:29.127"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:28.725" endtime="20230906 11:50:29.127"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:29.128" endtime="20230906 11:50:29.199"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:29.201" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:29.199" endtime="20230906 11:50:29.994"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:29.128" endtime="20230906 11:50:29.994"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:28.608" endtime="20230906 11:50:29.994"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:29.995" endtime="20230906 11:50:31.713"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>優惠劵清單</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230906 11:50:31.786" level="INFO">Current page contains text '優惠劵清單'.</msg>
+<status status="PASS" starttime="20230906 11:50:31.713" endtime="20230906 11:50:31.787"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230906 11:50:31.788" endtime="20230906 11:50:31.793"/>
+</kw>
+<doc>會務人員身份進入[持續進修管理]&gt;活動課程管理&gt;點擊[優惠券列表]
+/      1.進入[持續進修管理]
+/      2.活動課程管理
+/      3.點擊[優惠券列表]
+/      Expected Result: 顯示相關頁面</doc>
+<tag>7022 持續進修管理-優惠券列表</tag>
+<status status="PASS" starttime="20230906 11:50:28.602" endtime="20230906 11:50:31.793"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="8-23-01" line="55">
+<kw name="Coupon Maintain">
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:31.803" endtime="20230906 11:50:31.856"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:31.857" level="INFO">Clicking element '//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:31.856" endtime="20230906 11:50:31.933"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:31.803" endtime="20230906 11:50:31.933"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>//a[text()="優惠劵管理"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:31.933" endtime="20230906 11:50:31.958"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:31.959" level="INFO">Clicking element '//a[text()="優惠劵管理"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:31.959" endtime="20230906 11:50:32.150"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:31.933" endtime="20230906 11:50:32.150"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:32.150" endtime="20230906 11:50:32.173"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:32.174" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:32.173" endtime="20230906 11:50:32.286"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:32.150" endtime="20230906 11:50:32.286"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:31.802" endtime="20230906 11:50:32.286"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:32.287" endtime="20230906 11:50:32.742"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${accountantName}</var>
+<arg>//tbody/tr/td[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:32.775" level="INFO">${accountantName} = 彭馨慧</msg>
+<status status="PASS" starttime="20230906 11:50:32.742" endtime="20230906 11:50:32.775"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//tbody/tr/td[2]/button</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:32.776" endtime="20230906 11:50:32.837"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:32.837" level="INFO">Clicking element '//tbody/tr/td[2]/button'.</msg>
+<status status="PASS" starttime="20230906 11:50:32.837" endtime="20230906 11:50:32.946"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:32.776" endtime="20230906 11:50:32.946"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:32.947" endtime="20230906 11:50:33.172"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:33.173" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:33.172" endtime="20230906 11:50:33.372"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:32.946" endtime="20230906 11:50:33.372"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:33.373" endtime="20230906 11:50:33.807"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{elements}</var>
+<arg>//tbody/tr/td[2]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230906 11:50:33.819" level="INFO">@{elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="9d93b50a-1f35-41a2-9684-71e82eb73da5")&gt; ]</msg>
+<status status="PASS" starttime="20230906 11:50:33.808" endtime="20230906 11:50:33.819"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{elements}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="9d93b50a-1f35-41a2-9684-71e82eb73da5")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${accountantName}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:33.839" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="9d93b50a-1f35-41a2-9684-71e82eb73da5")&gt;' contains text '彭馨慧'.</msg>
+<status status="PASS" starttime="20230906 11:50:33.820" endtime="20230906 11:50:33.840"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:33.820" endtime="20230906 11:50:33.840"/>
+</iter>
+<status status="PASS" starttime="20230906 11:50:33.820" endtime="20230906 11:50:33.840"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230906 11:50:33.840" endtime="20230906 11:50:33.845"/>
+</kw>
+<doc>會務人員身份進入[持續進修管理]&gt;活動課程管理&gt;點擊[優惠券列表]
+/      1.進入[持續進修管理]
+/      2.活動課程管理
+/      3.點擊[優惠券列表]
+/      4.列表中點擊會員姓名link
+/      5.進入該會員優惠券清單
+/      Expected Result: 顯示相關頁面</doc>
+<tag>7023 持續進修管理-會員優惠券</tag>
+<status status="PASS" starttime="20230906 11:50:31.796" endtime="20230906 11:50:33.846"/>
+</test>
+<test id="s1-s1-s1-s1-t3" name="8-24-01" line="76">
+<kw name="Series Maintain">
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:33.855" endtime="20230906 11:50:33.900"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:33.901" level="INFO">Clicking element '//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:33.900" endtime="20230906 11:50:33.945"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:33.855" endtime="20230906 11:50:33.945"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>//a[text()="系列管理"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:33.945" endtime="20230906 11:50:33.968"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:33.969" level="INFO">Clicking element '//a[text()="系列管理"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:33.968" endtime="20230906 11:50:34.133"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:33.945" endtime="20230906 11:50:34.133"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:34.134" endtime="20230906 11:50:34.156"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:34.157" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:34.156" endtime="20230906 11:50:34.438"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:34.133" endtime="20230906 11:50:34.438"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:33.854" endtime="20230906 11:50:34.438"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:34.439" endtime="20230906 11:50:34.868"/>
+</kw>
+<kw name="Search By Keyword" library="8_持續進修管理_共用關鍵字">
+<arg>1</arg>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[contains(@placeholder,"請輸入")]</arg>
+<arg>${keyword}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:34.870" endtime="20230906 11:50:34.905"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:34.906" level="INFO">Typing text '1' into text field '//input[contains(@placeholder,"請輸入")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:34.905" endtime="20230906 11:50:35.000"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:34.870" endtime="20230906 11:50:35.000"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>${Button.Search}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:35.001" endtime="20230906 11:50:35.034"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:35.035" level="INFO">Clicking element '//button[contains(.,"查詢")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:35.034" endtime="20230906 11:50:35.139"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:35.000" endtime="20230906 11:50:35.139"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:34.869" endtime="20230906 11:50:35.139"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:50:36.140" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230906 11:50:35.139" endtime="20230906 11:50:36.140"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:36.140" endtime="20230906 11:50:36.152"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{elements}</var>
+<arg>//tbody/tr/td[1]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230906 11:50:36.169" level="INFO">@{elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="3d9ae889-78dd-49cc-86cd-ea9661a7f5ef")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20230906 11:50:36.152" endtime="20230906 11:50:36.169"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{elements}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="3d9ae889-78dd-49cc-86cd-ea9661a7f5ef")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.183" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="3d9ae889-78dd-49cc-86cd-ea9661a7f5ef")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.170" endtime="20230906 11:50:36.183"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.169" endtime="20230906 11:50:36.183"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="2251f3d2-4a80-453c-9a12-c12d704ba6e8")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.199" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="2251f3d2-4a80-453c-9a12-c12d704ba6e8")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.183" endtime="20230906 11:50:36.199"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.183" endtime="20230906 11:50:36.200"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="a75ae048-d49a-4ae3-aa23-8862862ab9b6")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.213" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="a75ae048-d49a-4ae3-aa23-8862862ab9b6")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.200" endtime="20230906 11:50:36.213"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.200" endtime="20230906 11:50:36.213"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="2c4161ae-f189-46bc-b90f-01fd0507bcf1")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.226" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="2c4161ae-f189-46bc-b90f-01fd0507bcf1")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.213" endtime="20230906 11:50:36.226"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.213" endtime="20230906 11:50:36.226"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="0d0d86c0-aec6-433e-a08b-7281881d77d3")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.236" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="0d0d86c0-aec6-433e-a08b-7281881d77d3")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.226" endtime="20230906 11:50:36.236"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.226" endtime="20230906 11:50:36.236"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="b791e9f5-b19e-476b-9d2d-08af0cb7e50c")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.248" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="b791e9f5-b19e-476b-9d2d-08af0cb7e50c")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.237" endtime="20230906 11:50:36.248"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.237" endtime="20230906 11:50:36.248"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="ada718ee-ce08-49e6-a2b5-c59309cc24ec")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.259" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="ada718ee-ce08-49e6-a2b5-c59309cc24ec")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.249" endtime="20230906 11:50:36.259"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.248" endtime="20230906 11:50:36.259"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="657a1103-829f-484b-8e91-2193903122d2")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.270" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="657a1103-829f-484b-8e91-2193903122d2")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.260" endtime="20230906 11:50:36.270"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.259" endtime="20230906 11:50:36.271"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="44876d38-6b13-4e83-bc2c-298c98cdf600")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.283" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="44876d38-6b13-4e83-bc2c-298c98cdf600")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.271" endtime="20230906 11:50:36.283"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.271" endtime="20230906 11:50:36.283"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="6e048f62-75c9-4548-a125-8a9f7499c653")&gt;</var>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230906 11:50:36.294" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="ddffcb0ddb0324af8ae60ad0b119521e", element="6e048f62-75c9-4548-a125-8a9f7499c653")&gt;' contains text '1'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.283" endtime="20230906 11:50:36.294"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.283" endtime="20230906 11:50:36.294"/>
+</iter>
+<status status="PASS" starttime="20230906 11:50:36.169" endtime="20230906 11:50:36.294"/>
+</for>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230906 11:50:36.295" endtime="20230906 11:50:36.298"/>
+</kw>
+<doc>會務人員身份進入[持續進修管理]&gt;活動課程管理&gt;點擊[系列課程]
+/      1.進入[持續進修管理]
+/      2.活動課程管理
+/      3.點擊[系列課程]
+/      4.於關鍵字輸入1
+/      5.點擊[查詢]
+/      Expected Result: 顯示相關頁面</doc>
+<tag>7024 持續進修管理-系列課程清單</tag>
+<status status="PASS" starttime="20230906 11:50:33.849" endtime="20230906 11:50:36.298"/>
+</test>
+<test id="s1-s1-s1-s1-t4" name="8-24-02" line="94">
+<kw name="Series Maintain">
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:36.303" endtime="20230906 11:50:36.329"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:36.330" level="INFO">Clicking element '//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.329" endtime="20230906 11:50:36.371"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.303" endtime="20230906 11:50:36.371"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>//a[text()="系列管理"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:36.372" endtime="20230906 11:50:36.393"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:36.394" level="INFO">Clicking element '//a[text()="系列管理"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.393" endtime="20230906 11:50:36.638"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.371" endtime="20230906 11:50:36.638"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:36.639" endtime="20230906 11:50:36.661"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:36.662" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:36.661" endtime="20230906 11:50:36.715"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.638" endtime="20230906 11:50:36.715"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:36.302" endtime="20230906 11:50:36.715"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:36.715" endtime="20230906 11:50:37.151"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>系列清單</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230906 11:50:37.209" level="INFO">Current page contains text '系列清單'.</msg>
+<status status="PASS" starttime="20230906 11:50:37.152" endtime="20230906 11:50:37.209"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230906 11:50:37.210" endtime="20230906 11:50:37.212"/>
+</kw>
+<doc>會務人員身份進入[持續進修管理]&gt;活動課程管理&gt;點擊[系列課程]
+/      1.進入[持續進修管理]
+/      2.活動課程管理
+/      3.點擊[系列課程]
+/      Expected Result: 顯示相關頁面</doc>
+<tag>7024 持續進修管理-系列課程清單-查詢</tag>
+<status status="PASS" starttime="20230906 11:50:36.299" endtime="20230906 11:50:37.213"/>
+</test>
+<test id="s1-s1-s1-s1-t5" name="8-25-01" line="105">
+<kw name="Series Maintain">
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:37.224" endtime="20230906 11:50:37.260"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:37.261" level="INFO">Clicking element '//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:37.260" endtime="20230906 11:50:37.308"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:37.223" endtime="20230906 11:50:37.309"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>//a[text()="系列管理"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:37.309" endtime="20230906 11:50:37.330"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:37.331" level="INFO">Clicking element '//a[text()="系列管理"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:37.331" endtime="20230906 11:50:37.491"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:37.309" endtime="20230906 11:50:37.492"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:37.492" endtime="20230906 11:50:37.517"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:37.518" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:37.517" endtime="20230906 11:50:37.584"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:37.492" endtime="20230906 11:50:37.584"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:37.223" endtime="20230906 11:50:37.584"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:37.584" endtime="20230906 11:50:38.023"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>${Button.Add}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:38.027" endtime="20230906 11:50:38.067"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:38.069" level="INFO">Clicking element '//button[contains(.,"新增")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:38.067" endtime="20230906 11:50:38.145"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:38.025" endtime="20230906 11:50:38.145"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:38.146" endtime="20230906 11:50:38.338"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:38.339" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:38.338" endtime="20230906 11:50:38.600"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:38.146" endtime="20230906 11:50:38.600"/>
+</kw>
+<kw name="Input Series Data">
+<arg>${Series}</arg>
+<doc>輸入系列課程資料</doc>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[@id="basic_name"]</arg>
+<arg>${series.Name}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:38.601" endtime="20230906 11:50:38.855"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:38.855" level="INFO">Typing text 'testing1' into text field '//input[@id="basic_name"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:38.855" endtime="20230906 11:50:38.964"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:38.601" endtime="20230906 11:50:38.965"/>
+</kw>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[@id="basic_entire_event_price"]</arg>
+<arg>${series.EntireEventPrice}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:38.966" endtime="20230906 11:50:39.003"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:39.003" level="INFO">Typing text '1000' into text field '//input[@id="basic_entire_event_price"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:39.003" endtime="20230906 11:50:39.104"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:38.965" endtime="20230906 11:50:39.104"/>
+</kw>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[@id="basic_group_event_price"]</arg>
+<arg>${series.GroupEventPrice}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:39.105" endtime="20230906 11:50:39.130"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:39.132" level="INFO">Typing text '900' into text field '//input[@id="basic_group_event_price"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:39.131" endtime="20230906 11:50:39.213"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:39.104" endtime="20230906 11:50:39.213"/>
+</kw>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[@id="basic_group_event_people"]</arg>
+<arg>${series.GroupEventPeople}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:39.214" endtime="20230906 11:50:39.241"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:39.242" level="INFO">Typing text '10' into text field '//input[@id="basic_group_event_people"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:39.241" endtime="20230906 11:50:39.323"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:39.213" endtime="20230906 11:50:39.323"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:38.600" endtime="20230906 11:50:39.323"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>${Button.Save}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:39.325" endtime="20230906 11:50:39.350"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:39.351" level="INFO">Clicking element '//button[contains(.,"儲 存")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:39.351" endtime="20230906 11:50:39.425"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:39.323" endtime="20230906 11:50:39.425"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:50:40.428" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230906 11:50:39.426" endtime="20230906 11:50:40.428"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>${Button.Confirm}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:40.430" endtime="20230906 11:50:40.469"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:40.469" level="INFO">Clicking element '//button[contains(.,"確 認")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:40.469" endtime="20230906 11:50:40.530"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:40.429" endtime="20230906 11:50:40.530"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:50:41.532" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230906 11:50:40.531" endtime="20230906 11:50:41.532"/>
+</kw>
+<kw name="Series Maintain">
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:41.534" endtime="20230906 11:50:41.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:41.590" level="INFO">Clicking element '//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:41.589" endtime="20230906 11:50:41.643"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:41.533" endtime="20230906 11:50:41.643"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>//a[text()="系列管理"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:41.644" endtime="20230906 11:50:41.664"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:41.665" level="INFO">Clicking element '//a[text()="系列管理"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:41.665" endtime="20230906 11:50:42.072"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:41.643" endtime="20230906 11:50:42.072"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:42.072" endtime="20230906 11:50:42.095"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:42.095" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:42.095" endtime="20230906 11:50:42.261"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:42.072" endtime="20230906 11:50:42.263"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:41.533" endtime="20230906 11:50:42.263"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:42.263" endtime="20230906 11:50:42.693"/>
+</kw>
+<kw name="Search By Keyword" library="8_持續進修管理_共用關鍵字">
+<arg>${Series.Name}</arg>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[contains(@placeholder,"請輸入")]</arg>
+<arg>${keyword}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:42.694" endtime="20230906 11:50:42.736"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:42.737" level="INFO">Typing text 'testing1' into text field '//input[contains(@placeholder,"請輸入")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:42.736" endtime="20230906 11:50:42.915"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:42.694" endtime="20230906 11:50:42.915"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>${Button.Search}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:42.916" endtime="20230906 11:50:42.951"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:42.953" level="INFO">Clicking element '//button[contains(.,"查詢")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:42.951" endtime="20230906 11:50:43.044"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:42.915" endtime="20230906 11:50:43.045"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:42.694" endtime="20230906 11:50:43.045"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:50:44.046" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230906 11:50:43.045" endtime="20230906 11:50:44.046"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Series.Name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230906 11:50:44.122" level="INFO">Current page contains text 'testing1'.</msg>
+<status status="PASS" starttime="20230906 11:50:44.047" endtime="20230906 11:50:44.122"/>
+</kw>
+<kw name="Delete Series">
+<arg>${Series.Name}</arg>
+<doc>刪除此名稱之系列課程</doc>
+<kw name="Series Maintain">
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:44.125" endtime="20230906 11:50:44.154"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:44.155" level="INFO">Clicking element '//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:44.155" endtime="20230906 11:50:44.195"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:44.124" endtime="20230906 11:50:44.195"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>//a[text()="系列管理"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:44.195" endtime="20230906 11:50:44.218"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:44.219" level="INFO">Clicking element '//a[text()="系列管理"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:44.219" endtime="20230906 11:50:44.626"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:44.195" endtime="20230906 11:50:44.626"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:44.626" endtime="20230906 11:50:44.649"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:44.650" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:44.649" endtime="20230906 11:50:44.727"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:44.626" endtime="20230906 11:50:44.727"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:44.124" endtime="20230906 11:50:44.727"/>
+</kw>
+<kw name="Search By Keyword" library="8_持續進修管理_共用關鍵字">
+<arg>${seriesName}</arg>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[contains(@placeholder,"請輸入")]</arg>
+<arg>${keyword}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:44.728" endtime="20230906 11:50:45.186"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:45.188" level="INFO">Typing text 'testing1' into text field '//input[contains(@placeholder,"請輸入")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:45.187" endtime="20230906 11:50:45.375"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:44.728" endtime="20230906 11:50:45.375"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>${Button.Search}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:45.377" endtime="20230906 11:50:45.409"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:45.409" level="INFO">Clicking element '//button[contains(.,"查詢")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:45.409" endtime="20230906 11:50:45.517"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:45.376" endtime="20230906 11:50:45.517"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:44.727" endtime="20230906 11:50:45.517"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//tbody//tr[contains(.,"${seriesName}")]${Button.Delete}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:45.518" endtime="20230906 11:50:45.555"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:45.556" level="INFO">Clicking element '//tbody//tr[contains(.,"testing1")]//button[contains(.,"刪除")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:45.555" endtime="20230906 11:50:45.638"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:45.517" endtime="20230906 11:50:45.638"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:50:46.639" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230906 11:50:45.639" endtime="20230906 11:50:46.639"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>${Button.Confirm}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:46.641" endtime="20230906 11:50:46.672"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:46.673" level="INFO">Clicking element '//button[contains(.,"確 認")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:46.672" endtime="20230906 11:50:46.739"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:46.639" endtime="20230906 11:50:46.739"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230906 11:50:47.740" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230906 11:50:46.739" endtime="20230906 11:50:47.740"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:44.123" endtime="20230906 11:50:47.740"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230906 11:50:47.743" endtime="20230906 11:50:47.748"/>
+</kw>
+<doc>會務人員身份進入[持續進修管理]&gt;活動課程管理&gt;點擊[系列課程]
+/      1.進入[持續進修管理]
+/      2.活動課程管理
+/      3.點擊[系列課程]
+/      4.點擊[新增]
+/      5. 與基本資料的名稱輸入測試一，全休金額輸入$1000 ，團報金額輸入$900 ， 團報人數輸入10人
+/      6. 按下儲存後畫面跳出提示訊息，並點擊確認
+/      Expected Result: 顯示相關頁面</doc>
+<tag>7025 持續進修管理-系列課程新增</tag>
+<status status="PASS" starttime="20230906 11:50:37.215" endtime="20230906 11:50:47.749"/>
+</test>
+<test id="s1-s1-s1-s1-t6" name="8-25-02" line="131">
+<kw name="Series Maintain">
+<kw name="Click And Enabled" library="CommonResource">
+<arg>//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:47.761" endtime="20230906 11:50:47.800"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:47.800" level="INFO">Clicking element '//div[@id="navbar"]//li[contains(.,"課程活動報名管理")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:47.800" endtime="20230906 11:50:47.845"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:47.760" endtime="20230906 11:50:47.845"/>
+</kw>
+<kw name="Click And Visible" library="CommonResource">
+<arg>//a[text()="系列管理"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:47.845" endtime="20230906 11:50:47.865"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:47.866" level="INFO">Clicking element '//a[text()="系列管理"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:47.866" endtime="20230906 11:50:48.032"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:47.845" endtime="20230906 11:50:48.032"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:48.032" endtime="20230906 11:50:48.060"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:48.060" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:48.060" endtime="20230906 11:50:48.105"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:48.032" endtime="20230906 11:50:48.105"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:47.760" endtime="20230906 11:50:48.105"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td[2]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230906 11:50:48.106" endtime="20230906 11:50:48.325"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>${Button.Add}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:48.327" endtime="20230906 11:50:48.356"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:48.357" level="INFO">Clicking element '//button[contains(.,"新增")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:48.356" endtime="20230906 11:50:48.550"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:48.325" endtime="20230906 11:50:48.550"/>
+</kw>
+<kw name="Wait And Select Frame" library="CommonResource">
+<arg>${IFrameId}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230906 11:50:48.551" endtime="20230906 11:50:48.602"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="${Id}"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230906 11:50:48.603" level="INFO">Selecting frame '//iframe[@id="ng-frame"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:48.602" endtime="20230906 11:50:48.664"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:48.550" endtime="20230906 11:50:48.664"/>
+</kw>
+<kw name="Input Series Data">
+<arg>${Series}</arg>
+<doc>輸入系列課程資料</doc>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[@id="basic_name"]</arg>
+<arg>${series.Name}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:48.666" endtime="20230906 11:50:48.915"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:48.916" level="INFO">Typing text 'testing1' into text field '//input[@id="basic_name"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:48.915" endtime="20230906 11:50:49.021"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:48.665" endtime="20230906 11:50:49.021"/>
+</kw>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[@id="basic_entire_event_price"]</arg>
+<arg>${series.EntireEventPrice}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:49.023" endtime="20230906 11:50:49.059"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:49.062" level="INFO">Typing text '1000' into text field '//input[@id="basic_entire_event_price"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:49.059" endtime="20230906 11:50:49.155"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:49.021" endtime="20230906 11:50:49.155"/>
+</kw>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[@id="basic_group_event_price"]</arg>
+<arg>${series.GroupEventPrice}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:49.157" endtime="20230906 11:50:49.182"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:49.183" level="INFO">Typing text '900' into text field '//input[@id="basic_group_event_price"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:49.182" endtime="20230906 11:50:49.256"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:49.155" endtime="20230906 11:50:49.256"/>
+</kw>
+<kw name="Wait And Input" library="CommonResource">
+<arg>//input[@id="basic_group_event_people"]</arg>
+<arg>${series.GroupEventPeople}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:49.257" endtime="20230906 11:50:49.285"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:49.286" level="INFO">Typing text '10' into text field '//input[@id="basic_group_event_people"]'.</msg>
+<status status="PASS" starttime="20230906 11:50:49.285" endtime="20230906 11:50:49.361"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:49.256" endtime="20230906 11:50:49.363"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:48.665" endtime="20230906 11:50:49.363"/>
+</kw>
+<kw name="Click And Enabled" library="CommonResource">
+<arg>${Button.Cancel}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230906 11:50:49.364" endtime="20230906 11:50:49.392"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230906 11:50:49.392" level="INFO">Clicking element '//button[contains(.,"取 消")]'.</msg>
+<status status="PASS" starttime="20230906 11:50:49.392" endtime="20230906 11:50:49.601"/>
+</kw>
+<status status="PASS" starttime="20230906 11:50:49.363" endtime="20230906 11:50:49.601"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://test.roccpa.org.tw/TACCTG/event/series</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230906 11:50:49.631" level="INFO">Current location is 'https://test.roccpa.org.tw/TACCTG/event/series'.</msg>
+<status status="PASS" starttime="20230906 11:50:49.602" endtime="20230906 11:50:49.632"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230906 11:50:49.632" endtime="20230906 11:50:49.745"/>
+</kw>
+<doc>會務人員身份進入[持續進修管理]&gt;活動課程管理&gt;點擊[系列課程]
+/      1.進入[持續進修管理]
+/      2.活動課程管理
+/      3.點擊[系列課程]
+/      4.點擊[新增]
+/      5. 與基本資料的名稱輸入測試一，全休金額輸入$1000 ，團報金額輸入$900 ， 團報人數輸入10人
+/      6. 按下取消
+/      Expected Result: 顯示相關頁面</doc>
+<tag>7025 持續進修管理-系列課程新增-取消</tag>
+<status status="PASS" starttime="20230906 11:50:47.751" endtime="20230906 11:50:49.745"/>
+</test>
+<doc>持續進修自動測試腳本(8-22-01~8-25-02)
+測試後會自動刪除測試中新增之資料，以利重複測試</doc>
+<status status="PASS" starttime="20230906 11:50:17.990" endtime="20230906 11:50:49.748"/>
+</suite>
+<status status="PASS" starttime="20230906 11:50:17.989" endtime="20230906 11:50:49.755"/>
+</suite>
+<status status="PASS" starttime="20230906 11:50:17.988" endtime="20230906 11:50:49.760"/>
+</suite>
+<status status="PASS" starttime="20230906 11:50:17.957" endtime="20230906 11:50:49.763"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">7022 持續進修管理-優惠券列表</stat>
+<stat pass="1" fail="0" skip="0">7023 持續進修管理-會員優惠券</stat>
+<stat pass="1" fail="0" skip="0">7024 持續進修管理-系列課程清單</stat>
+<stat pass="1" fail="0" skip="0">7024 持續進修管理-系列課程清單-查詢</stat>
+<stat pass="1" fail="0" skip="0">7025 持續進修管理-系列課程新增</stat>
+<stat pass="1" fail="0" skip="0">7025 持續進修管理-系列課程新增-取消</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="TestConflict">TestConflict</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="pythonProject">TestConflict.pythonProject</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1-s1" name="roc cpa robotTest">TestConflict.pythonProject.roc cpa robotTest</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1-s1-s1" name="8 持續進修管理 優惠券與系列課程">TestConflict.pythonProject.roc cpa robotTest.8 持續進修管理 優惠券與系列課程</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230906 11:50:17.993" level="ERROR">Error in file 'C:\Users\User\Documents\TestConflict\pythonProject\roc_cpa_robotTest\8_持續進修管理_優惠券與系列課程.robot' on line 5: Importing library 'ExcelLibrary' failed: ModuleNotFoundError: No module named 'ExcelLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\Documents\TestConflict
+  C:\Users\User\Documents\TestConflict
+  C:\Users\User\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\User\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\User\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\User\AppData\Local\Programs\Python\Python311
+  C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages
+  C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32
+  C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32\lib
+  C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>
